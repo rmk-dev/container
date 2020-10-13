@@ -1,0 +1,25 @@
+{
+    "name": "rmk/container",
+    "description": "Simple PSR container implementation",
+    "authors": [
+        {
+            "name": "Kiril Savchev",
+            "email": "k.savchev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "psr/container": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rmk\\Container\\": "./src/Container/"
+        }
+    },
+    "autoload-dev": {
+            "Rmk\\Tests\\Container\\": "./tests/Container/"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3"
+    }
+}
