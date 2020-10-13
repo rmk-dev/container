@@ -1,6 +1,7 @@
 {
     "name": "rmk/container",
     "description": "Simple PSR container implementation",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Kiril Savchev",
