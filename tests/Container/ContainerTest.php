@@ -70,4 +70,10 @@ class ContainerTest extends TestCase
         $this->container->removeItem($this->testValue);
         $this->assertFalse($this->container->contains($this->testValue));
     }
+
+    public function testToArray(): void
+    {
+        $this->container->add($this->testValue, 'key');
+        $this->assertEquals(['key' => $this->testValue], $this->container->toArray());
+    }
 }

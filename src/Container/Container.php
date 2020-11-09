@@ -94,4 +94,14 @@ class Container extends ArrayObject implements ContainerInterface
             $this->offsetUnset($key);
         }
     }
+
+    /**
+     * Returns the collection values as array
+     *
+     * @return array
+     */
+    public function toArray(): array
+    {
+        return $this->getArrayCopy();
+    }
 }

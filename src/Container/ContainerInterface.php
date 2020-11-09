@@ -13,4 +13,6 @@ interface ContainerInterface extends PsrContainerInterface {
     public function remove($id): void;
 
     public function removeItem($item): void;
+
+    public function toArray(): array;
 }
