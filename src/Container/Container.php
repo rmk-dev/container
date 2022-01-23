@@ -11,6 +11,8 @@ use \ArrayObject;
  * Class Container
  *
  * @package Rmk\Container
+ *
+ * @author Kiril Savchev <k.savchev@gmail.com>
  */
 class Container extends ArrayObject implements ContainerInterface
 {
