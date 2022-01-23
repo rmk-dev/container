@@ -62,9 +62,7 @@ class Container extends ArrayObject implements ContainerInterface
     public function add($item, $id = null): void
     {
         if ($id === null) {
-            $array = $this->getArrayCopy();
-            $array[] = $item;
-            $this->exchangeArray($array);
+            $this->append($item);
         } else {
             $this->offsetSet($id, $item);
         }
@@ -92,8 +90,10 @@ class Container extends ArrayObject implements ContainerInterface
     {
         if ($this->contains($item)) {
             $array = $this->getArrayCopy();
-            $key = array_search($item, $array, true);
-            $this->offsetUnset($key);
+            $keys = array_keys($array, $item, true);
+            foreach ($keys as $key) {
+                $this->offsetUnset($key);
+            }
         }
     }
 
